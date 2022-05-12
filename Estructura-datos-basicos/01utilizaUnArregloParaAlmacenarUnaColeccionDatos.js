@@ -32,6 +32,9 @@ let complexArray = [
 Hemos definido una variable llamada yourArray. Completa la sentencia asignando un arreglo de al menos 5 elementos de longitud a la variable yourArray. Tu arreglo debe contener al menos una cadena (string), un número (number) y un booleano (boolean).
 */
 
+let yourArray=["Hola", 3, true, "German", 33]; // Cambia esta línea
+
+console.log(typeof yourArray)
 
 
 /*PRUEBAS
