@@ -15,7 +15,33 @@ romanNumerals tendrá el valor ['XIX', 'XX', 'XXI', 'XXII', 'XXIII']. Ten en cue
 Hemos definido una función, mixedNumbers, a la cual le estamos pasando un arreglo como argumento. Modifica la función utilizando push() y unshift() para agregar 'I', 2, 'three' al principio del arreglo y 7, 'VIII', 9 al final, de tal modo que el arreglo devuelto contenga las representaciones de los números del 1 al 9 en orden.
 */
 
+// solucion mia
+function mixedNumbers(arr) {
+    // Cambia solo el código debajo de esta línea
+  var begin=["I", 2, "three"];
+  var end=[7, "VIII", 9];
+   arr.unshift(...begin);
+   arr.push(...end);
+   
+    // Cambia solo el código encima de esta línea
+    return arr;
+  }
+  
+  console.log(mixedNumbers(["IV", 5, "six"]));
+  
+//solucion freeCodeCamp
+/*
+function mixedNumbers(arr) {
+  // change code below this line
+  arr.unshift("I", 2, "three");
+  arr.push(7, "VIII", 9);
+  // change code above this line
+  return arr;
+}
 
+// do not change code below this line
+console.log(mixedNumbers(["IV", 5, "six"]));
+*/
 
 /*PRUEBAS
 mixedNumbers(["IV", 5, "six"]) ahora debe devolver ["I", 2, "three", "IV", 5, "six", 7, "VIII", 9]
