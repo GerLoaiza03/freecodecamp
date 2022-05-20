@@ -1,0 +1,58 @@
+<!--
+¡Excelente! Acabamos de demostrar que los estilos en línea sobrescribirán todas las declaraciones CSS en tu elemento style.
+
+Pero, ¡aguarda! Existe una última forma de sobreescribir CSS. Este es el método más poderoso de todos. Pero antes de utilizarlo, consideremos por qué querrías sobreescribir una regla CSS.
+
+En muchas situaciones usarás librerías de CSS. Estas librerías pueden sobreescribir accidentalmente tu propio código CSS. Entonces, cuando necesites asegurarte de que a un elemento se le aplique un código CSS específico, puedes usar !important.
+
+Volvamos a nuestra declaración de la clase pink-text. Recuerda que nuestra clase pink-text fue sobreescrita por declaraciones posteriores de clases, declaraciones de id e "inline styles".
+
+Añade la palabra clave !important a la declaración de color de pink-text para asegurarte completamente de que tu elemento h1 será de color rosado.
+
+Aquí te mostramos un ejemplo de cómo hacerlo:
+
+color: red !important;
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+          background-color: black;
+          font-family: monospace;
+          color: green;
+        }
+        #orange-text {
+          color: orange;
+        }
+        .pink-text {
+          color: pink !important;
+        }
+        .blue-text {
+          color: blue;
+        }
+      </style>
+      <h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+</body>
+</html>
+
+<!--PRUEBAS
+Tu elemento h1 debe incluir la clase pink-text.
+
+Tu elemento h1 debe incluir la clase blue-text.
+
+Tu elemento h1 debe incluir el id orange-text.
+
+Tu elemento h1 debe incluir el "inline style" color: white.
+
+Tu elemento pink-text debe tener la palabra clave !important para sobrescribir todas las demás declaraciones.
+
+Tu elemento h1 debe ser de color rosado ("pink").
+--> 

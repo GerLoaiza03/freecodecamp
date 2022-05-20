@@ -1,0 +1,42 @@
+<!--
+A veces los elementos HTML reciben múltiples estilos que entran en conflicto entre sí.
+
+Por ejemplo, tu elemento h1 no puede ser verde y rosado al mismo tiempo.
+
+Veamos qué ocurre cuando creamos una clase que hace que el texto sea rosado ("pink"), y luego se la aplicamos a un elemento. ¿Sobreescribirá nuestra clase la prioridad CSS color: green; del elemento body?
+
+Crea una clase CSS adicional llamada pink-text que asigne a un elemento el color rosado ("pink").
+
+Asigna a tu elemento h1 la clase pink-text.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: black;
+            font-family: monospace;
+            color: green;
+        }
+        .pink-text{
+            color: pink;
+        }
+    </style>
+    <h1 class="pink-text">Hello World!</h1>
+</body>
+</html>
+
+<!--PRUEBAS
+Tu elemento h1 debe incluir la clase pink-text.
+
+Tu <style> debería tener una clase CSS pink-text que cambie su color.
+
+Tu elemento h1 debe ser de color rosado ("pink")
+-->
