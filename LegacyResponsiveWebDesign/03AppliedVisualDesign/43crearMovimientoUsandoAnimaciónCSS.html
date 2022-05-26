@@ -1,0 +1,78 @@
+<!--
+Cuando los elementos tienen una position, como fixed o relative, las propiedades de desplazamiento CSS right, left, top y bottom se pueden usar en las reglas de animación para crear movimiento.
+
+Como se muestra en el siguiente ejemplo, puedes empujar el elemento hacia abajo y luego hacia arriba estableciendo la propiedad top fotograma clave (keyframe) a 50% en 50px, pero estableciéndolo en 0px para el primer fotograma clave (0%) y el último a (100%).
+
+@keyframes rainbow {
+  0% {
+    background-color: blue;
+    top: 0px;
+  }
+  50% {
+    background-color: green;
+    top: 50px;
+  }
+  100% {
+    background-color: yellow;
+    top: 0px;
+  }
+}
+Agrega un movimiento horizontal a la animación div. Usando la propiedad desplazamiento left, agrega a la regla @keyframes para que el arcoíris (rainbow) comience en 0 píxeles en 0%, se mueva a 25 píxeles en 50%, y termine en -25 píxeles en 100%. No reemplaces la propiedad top en el editor; la animación debe tener movimiento vertical y horizontal.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div {
+            height: 40px;
+            width: 70%;
+            background: black;
+            margin: 50px auto;
+            border-radius: 5px;
+            position: relative;
+        }
+    
+        #rect {
+            animation-name: rainbow;
+            animation-duration: 4s;
+        }
+    
+        @keyframes rainbow {
+            0% {
+                background-color: blue;
+                top: 0px;
+                left: 0px;
+            }
+    
+            50% {
+                background-color: green;
+                top: 50px;
+                left: 25px;
+            }
+    
+            100% {
+                background-color: yellow;
+                top: 0px;
+                left: -25px;
+            }
+        }
+    </style>
+    
+    <div id="rect"></div>
+</body>
+</html>
+
+<!--PRUEBAS
+La regla @keyframes para 0% debe usar el desplazamiento left de 0px.
+
+La regla @keyframes para 50% debe usar el desplazamiento left de 25px.
+
+La regla @keyframes para 100% debe usar el desplazamiento left de -25px.
+-->

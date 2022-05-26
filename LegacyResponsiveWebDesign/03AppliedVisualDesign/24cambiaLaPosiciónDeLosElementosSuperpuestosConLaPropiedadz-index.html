@@ -1,0 +1,45 @@
+<!--
+Cuando los elementos son posicionados para superponerse (i.e. usando position: absolute | relative | fixed | sticky), el elemento que viene después dentro del marcado HTML aparecerá, por defecto, encima de los otros elementos. Sin embargo, la propiedad z-index puede especificar el orden de cómo los elementos están apilados unos sobre otros. Debe ser un entero (i.e. un número entero y no un decimal), y los elementos que mayor valor tengan en z-index serán movidos más arriba en la pila de elementos que aquellos con valores menores.
+
+Agrega una propiedad z-index al elemento con la clase first (el rectángulo rojo) y asígnale un valor de 2 para que cubra al otro elemento (rectángulo azul).
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div {
+            width: 60%;
+            height: 200px;
+            margin-top: 20px;
+        }
+    
+        .first {
+            background-color: red;
+            position: absolute;
+            z-index: 2;
+        }
+    
+        .second {
+            background-color: blue;
+            position: absolute;
+            left: 40px;
+            top: 50px;
+            z-index: 1;
+        }
+    </style>
+    
+    <div class="first"></div>
+    <div class="second"></div>
+</body>
+</html>
+
+<!--PRUEBAS
+El elemento con clase first debe tener un valor z-index de 2.
+-->

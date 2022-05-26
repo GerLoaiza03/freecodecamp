@@ -1,0 +1,41 @@
+<!--
+Dado que la función skewX() inclina el elemento seleccionado a lo largo del eje X en un grado dado, no sorprende que la propiedad skewY() incline un elemento a lo largo del eje Y (vertical).
+
+Inclina el elemento con el id de top -10 grados a lo largo del eje Y utilizando la propiedad transform.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div {
+            width: 70%;
+            height: 100px;
+            margin: 50px auto;
+        }
+    
+        #top {
+            background-color: red;
+            transform: skewY(-10deg);
+        }
+    
+        #bottom {
+            background-color: blue;
+            transform: skewX(24deg);
+        }
+    </style>
+    
+    <div id="top"></div>
+    <div id="bottom"></div>
+</body>
+</html>
+
+<!--PRUEBAS
+El elemento con id top debe estar inclinado en -10 grados a lo largo de su eje Y.
+-->

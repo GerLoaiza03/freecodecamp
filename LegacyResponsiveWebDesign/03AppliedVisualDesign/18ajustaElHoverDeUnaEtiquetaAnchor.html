@@ -1,0 +1,37 @@
+<!--
+Este desafío mostrará el uso de las pseudo-clases. Una pseudo-clase es una palabra clave que se puede agregar a los selectores para seleccionar un estado específico de un elemento.
+
+Por ejemplo, el estilo de una etiqueta "anchor" puede ser cambiado por el estado de su hover utilizando el selector de pseudo-clase :hover. Aquí está el CSS para cambiar el color color de la etiqueta de "anchor" a rojo durante el estado hover:
+
+a:hover {
+  color: red;
+}
+El editor de código tiene una regla CSS para dar estilo a todas las etiquetas a en negro. Añade una regla para que cuando el usuario pase sobre la etiqueta a, el color `` sea azul.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        a {
+          color: #000;
+        }
+        a:hover {
+          color: blue;
+        }
+      </style>
+      <a href="https://freecatphotoapp.com/" target="_blank">CatPhotoApp</a>
+</body>
+</html>
+
+<!--PRUEBAS
+La etiqueta anchor color debe permanecer en negro, solo añade reglas CSS para el estado :hover.
+
+La etiqueta "anchor" debe tener un color al pasar el ratón.
+-->
